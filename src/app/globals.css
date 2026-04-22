@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.25s ease-out;
+}
+
+:root {
+  --cream-50: #fffcf5;
+  --cream-100: #fff7e9;
+  --cream-200: #f7ead5;
+  --cream-300: #eadcc5;
+  --saffron-100: #fff0cf;
+  --saffron-200: #ffe2a3;
+  --saffron-400: #f2b84b;
+  --saffron-500: #df9a2d;
+  --saffron-600: #bd7b20;
+  --green-100: #e7f0e8;
+  --green-200: #c9ddcc;
+  --green-500: #5b8a62;
+  --green-600: #43724d;
+  --green-700: #2f5f3d;
+  --green-800: #244d34;
+  --green-900: #173d2b;
+  --green-950: #10291f;
+  --stone-500: #80796c;
+  --stone-600: #696153;
+  --stone-700: #514a3f;
+  --clay-100: #f9e8df;
+  --clay-500: #c97955;
+  --ring: #2f5f3d;
+  --ring-soft: rgba(47, 95, 61, 0.16);
+  --background: var(--cream-50);
+  --foreground: var(--green-950);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 4%, rgba(242, 184, 75, 0.14), transparent 30%),
+    linear-gradient(180deg, var(--cream-50) 0%, #fff 44%, var(--cream-50) 100%);
+  color: var(--foreground);
+  font-family: "Noto Sans Devanagari", "Nirmala UI", "Mangal", Inter, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--saffron-200);
+  color: var(--green-950);
+}
+
+.eyebrow {
+  color: var(--green-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.field-error {
+  color: #a33b20;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hero-mask {
+  background:
+    linear-gradient(90deg, rgba(255, 252, 245, 0.98) 0%, rgba(255, 252, 245, 0.78) 42%, rgba(255, 252, 245, 0.1) 70%),
+    linear-gradient(180deg, rgba(16, 41, 31, 0.04), rgba(16, 41, 31, 0.22));
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
