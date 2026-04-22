@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, MessageCircle, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -16,8 +17,15 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-[var(--cream-300)] bg-[rgba(255,252,245,0.9)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-3" aria-label="ShreeFit home">
-          <span className="grid h-11 w-11 place-items-center rounded-full bg-[var(--green-900)] text-base font-bold text-[var(--saffron-200)] shadow-sm">
-            SF
+          <span className="relative grid h-14 w-14 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-[var(--cream-300)]">
+            <Image
+              src="/images/logo-cropped.jpg"
+              alt="ShreeFit logo"
+              width={56}
+              height={56}
+              className="h-full w-full object-contain"
+              priority
+            />
           </span>
           <span>
             <span className="block text-lg font-bold leading-tight text-[var(--green-950)]">

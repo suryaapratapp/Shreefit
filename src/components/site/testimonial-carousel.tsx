@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { testimonials } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+const CARD_GAP = 16;
 
 function getVisibleCount(width: number) {
   if (width >= 1024) return 3;
@@ -31,9 +32,10 @@ export function TestimonialsCarousel() {
     if (!viewport) return;
 
     const updateSize = () => {
-      const count = getVisibleCount(viewport.offsetWidth);
+      const count = getVisibleCount(window.innerWidth);
+      const availableWidth = viewport.offsetWidth;
       setVisibleCount(count);
-      setSlideWidth(viewport.offsetWidth / count);
+      setSlideWidth((availableWidth - CARD_GAP * (count - 1)) / count);
     };
 
     updateSize();
@@ -83,7 +85,7 @@ export function TestimonialsCarousel() {
     <div className="relative" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <div
         ref={viewportRef}
-        className="overflow-hidden"
+        className="mx-auto w-full max-w-[360px] overflow-hidden sm:max-w-[736px] lg:max-w-[1172px]"
         onTouchStart={(event) => {
           touchStartX.current = event.touches[0]?.clientX ?? null;
           setPaused(true);
@@ -94,43 +96,18 @@ export function TestimonialsCarousel() {
         }}
       >
         <div
-          className={cn("flex", instant ? "transition-none" : "transition-transform duration-700 ease-out")}
-          style={{ transform: `translate3d(-${active * slideWidth}px, 0, 0)` }}
+          className={cn("flex gap-4", instant ? "transition-none" : "transition-transform duration-700 ease-out")}
+          style={{ transform: `translate3d(-${active * (slideWidth + CARD_GAP)}px, 0, 0)` }}
           onTransitionEnd={handleTransitionEnd}
         >
           {slides.map((testimonial, index) => (
             <article
               key={`${testimonial.name}-${index}`}
-              className="min-w-0 shrink-0 px-2"
+              className="min-w-0 shrink-0 self-stretch"
               style={{ width: slideWidth || undefined }}
             >
-              <div className="flex h-full min-h-[500px] flex-col overflow-hidden rounded-lg border border-[var(--cream-300)] bg-white shadow-[0_18px_50px_rgba(47,74,59,0.08)]">
-                <div className="relative aspect-[4/3] overflow-hidden bg-[linear-gradient(145deg,var(--cream-100),var(--green-100))]">
-                  {testimonial.image ? (
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 grid place-items-center p-6 text-center">
-                      <div>
-                        <div className="mx-auto grid h-24 w-24 place-items-center rounded-full bg-[var(--green-900)] text-3xl font-bold text-[var(--saffron-200)] shadow-lg">
-                          {testimonial.initials}
-                        </div>
-                        <p className="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--green-700)]">
-                          Customer photo placeholder
-                        </p>
-                        <p className="mt-2 text-sm leading-6 text-[var(--stone-600)]">
-                          Replace from testimonial data when real photos are ready.
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="flex flex-1 flex-col p-5 sm:p-6">
+              <div className="flex h-full min-h-[340px] flex-col overflow-hidden rounded-lg border border-[var(--cream-300)] bg-white shadow-[0_18px_50px_rgba(47,74,59,0.08)]">
+                <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="text-lg font-bold text-[var(--green-950)]">
@@ -142,7 +119,7 @@ export function TestimonialsCarousel() {
                     </div>
                     <Quote className="h-8 w-8 shrink-0 text-[var(--saffron-600)]" aria-hidden="true" />
                   </div>
-                  <p className="mt-6 flex-1 text-lg leading-8 text-[var(--green-950)]">
+                  <p className="mt-5 flex-1 text-base leading-7 text-[var(--green-950)] sm:text-lg sm:leading-8">
                     “{testimonial.quote}”
                   </p>
                 </div>

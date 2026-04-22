@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
@@ -9,8 +10,14 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-[var(--saffron-400)] text-base font-bold text-[var(--green-950)]">
-              SF
+            <span className="relative grid h-14 w-14 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-white/20">
+              <Image
+                src="/images/logo-cropped.jpg"
+                alt="ShreeFit logo"
+                width={56}
+                height={56}
+                className="h-full w-full object-contain"
+              />
             </span>
             <div>
               <p className="text-lg font-bold">{site.fullName}</p>

@@ -250,7 +250,7 @@ export const testimonials = [
   {
     quote:
       "Papa ko random videos follow karna mushkil lagta tha. ShreeFit mein routine clear hai, guidance patient hai, aur unka confidence better hua hai.",
-    name: "Madhur and Tamanna",
+    name: "Madhur and Tamanna ji",
     relation: "Children of participant",
     image: "/images/tamanna.png",
     imageAlt: "Madhur and Tamanna, children of a ShreeFit participant",
@@ -261,32 +261,32 @@ export const testimonials = [
       "Class Hindi mein hoti hai, isliye samajhna easy hai. Body thodi flexible feel hoti hai aur din ki shuruaat achhi lagti hai.",
     name: "Meena ji",
     relation: "Participant, 56",
-    image: "",
+    image: "/images/meena.png",
     imageAlt: "Meena ji, ShreeFit participant",
     initials: "MJ",
   },
   {
     quote:
-      "Main apne parents se door rehta hoon, isliye mujhe safe guided class chahiye thi. Hindi instruction aur fixed timing se unka routine kaafi better hua hai.",
-    name: "Rohit V.",
-    relation: "Son living away",
-    image: "",
-    imageAlt: "Rohit V., son enquiring for parents",
+      "Hum apne parents se door rehte hai, isliye mujhe safe guided class chahiye thi. Hindi instruction aur fixed timing se unka routine kaafi better hua hai.",
+    name: "Jagdeep and Pooja ji",
+    relation: "Children living abroad",
+    image: "/images/jagdeep.png",
+    imageAlt: "Jagdeep, son enquiring for parents",
     initials: "RV",
   },
   {
     quote:
       "Sushma ji aur Shri Bhagwan ji patiently samjhate hain. Exercise pressure jaisi nahi lagti, bas ek achha daily wellness routine lagta hai.",
-    name: "Kavita ji",
-    relation: "Participant, 62",
-    image: "",
-    imageAlt: "Kavita ji, ShreeFit participant",
+    name: "Krishna ji",
+    relation: "Participant, 51",
+    image: "/images/rk.png",
+    imageAlt: "Krishna ji, ShreeFit participant",
     initials: "KJ",
   },
   {
     quote:
       "Mummy ko English fitness terms mein problem hoti thi. Yahan Hindi mein simple cues milte hain, isliye woh class confidently follow karti hain.",
-    name: "Neha R.",
+    name: "Neha R. ji",
     relation: "Daughter of participant",
     image: "",
     imageAlt: "Neha R., daughter of a ShreeFit participant",
