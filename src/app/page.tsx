@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight, CheckCircle2, HeartPulse, MessageCircle } from "lucide-react";
-import { BenefitsGrid, ExpertsSection, HomepageFaqPreview, ProcessSteps, SbasTrustSection, TestimonialsSection, TimingsGrid, WhoItsForList } from "@/components/site/content-blocks";
+import { CheckCircle2, HeartPulse, MessageCircle } from "lucide-react";
+import { ExpertsSection, HomepageFaqPreview, SbasTrustSection, SundaySessionSection, TestimonialsSection, TimingsGrid, WhoItsForList } from "@/components/site/content-blocks";
 import { CtaBand, PrimaryCtas } from "@/components/site/cta";
+import { PaymentSection } from "@/components/site/payment-section";
 import { Reveal } from "@/components/site/reveal";
 import { Section, SectionHeader } from "@/components/site/section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { audienceCards, faqs, trustPoints, whatsappLink, whatsappMessages, whyFamiliesChoose } from "@/lib/site";
+import { faqs, trustPoints, whatsappLink, whatsappMessages, whyFamiliesChoose } from "@/lib/site";
 import { SiteIcon } from "@/components/site/icon";
 
 export const metadata: Metadata = {
@@ -62,9 +62,9 @@ export default function Home() {
               Apne parents ko ghar baithe safe aur guided fitness routine dein.
             </p>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--stone-700)]">
-              Hindi mein live classes, pyaar se guidance, aur better routine. Yoga-inspired
-              movement, breathwork, mobility, flexibility aur daily wellness ka simple
-              program for Indian families.
+              Hindi mein live classes, pyaar se guidance, aur better routine. Stretching,
+              stamina, mobility, flexibility, gentle strength, breathwork aur healthy
+              lifestyle ka balanced program for Indian families.
             </p>
             <PrimaryCtas className="mt-8" />
             <div className="mt-8 flex flex-wrap gap-3">
@@ -101,29 +101,15 @@ export default function Home() {
         </div>
       </section>
 
-      <Section className="bg-white">
-        <div className="grid gap-4 md:grid-cols-2">
-          {audienceCards.map((card, index) => (
-            <Reveal key={card.title} delay={index * 0.05}>
-              <Card className="h-full">
-                <CardHeader>
-                  <p className="eyebrow">{card.eyebrow}</p>
-                  <h2 className="text-2xl font-bold text-[var(--green-950)]">{card.title}</h2>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg leading-8 text-[var(--stone-700)]">{card.text}</p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
+      <Section className="bg-[var(--cream-50)]">
+        <PaymentSection />
       </Section>
 
-      <Section className="bg-[var(--cream-50)]">
+      <Section className="bg-white">
         <SectionHeader
           eyebrow="Why families choose ShreeFit"
-          title="Safe, structured, Hindi-first wellness for parents."
-          text="Aapke parents ke liye routine simple, respectful aur easy-to-follow hona chahiye. ShreeFit isi thought se built hai."
+          title="Complete fitness + wellness routine for parents."
+          text="Aapke parents ke liye guided movement, stretching, stamina, strength, routine aur healthy lifestyle simple aur respectful tareeke se."
           align="center"
         />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -145,16 +131,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-white" id="program">
-        <SectionHeader
-          eyebrow="How it works"
-          title="From WhatsApp enquiry to a steady wellness routine."
-          text="No complicated onboarding. Hum parent ki needs samajhkar suitable morning ya evening batch suggest karte hain."
-          align="center"
-        />
-        <ProcessSteps />
-      </Section>
-
       <Section className="bg-[var(--cream-50)]">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
@@ -167,29 +143,15 @@ export default function Home() {
       </Section>
 
       <Section className="bg-white">
-        <SectionHeader
-          eyebrow="Benefits"
-          title="Small daily movement can create a calmer, more active routine."
-          text="Sessions focus on mobility, flexibility, balance, gentle strength, breathwork and confidence."
-          align="center"
-        />
-        <BenefitsGrid compact />
-        <div className="mt-8 text-center">
-          <Button asChild size="lg" variant="outline">
-            <Link href="/program">
-              See complete program benefits
-              <ArrowUpRight className="h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </Section>
-
-      <Section className="bg-[var(--cream-50)]">
         <ExpertsSection />
       </Section>
 
-      <Section className="bg-white">
+      <Section className="bg-[var(--cream-50)]">
         <SbasTrustSection />
+      </Section>
+
+      <Section className="bg-white">
+        <SundaySessionSection />
       </Section>
 
       <Section className="bg-[var(--cream-50)]" id="timings">
@@ -200,7 +162,7 @@ export default function Home() {
         <SectionHeader
           eyebrow="Testimonials"
           title="Warm words from families and parents"
-          text="Placeholder testimonials are editable and written in a Hindi/Hinglish style that matches the audience."
+          text="Parents aur families ka experience: Hindi guidance, regular routine, better movement aur ghar se safe support."
           align="center"
         />
         <TestimonialsSection />

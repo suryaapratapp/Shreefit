@@ -88,6 +88,59 @@ textarea {
     linear-gradient(180deg, rgba(16, 41, 31, 0.04), rgba(16, 41, 31, 0.22));
 }
 
+.pricing-ambient {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(242, 184, 75, 0.28), transparent 28%),
+    radial-gradient(circle at 82% 16%, rgba(91, 138, 98, 0.28), transparent 30%),
+    linear-gradient(135deg, rgba(255, 252, 245, 0.72), rgba(231, 240, 232, 0.5));
+}
+
+.wellness-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 226, 163, 0.72);
+  box-shadow: 0 0 24px rgba(255, 226, 163, 0.42);
+  animation: wellness-float 8s ease-in-out infinite;
+}
+
+.wellness-particle-slow {
+  width: 14px;
+  height: 14px;
+  background: rgba(201, 221, 204, 0.62);
+  animation-duration: 11s;
+  animation-delay: -2s;
+}
+
+.wellness-particle-leaf {
+  width: 20px;
+  height: 9px;
+  border-radius: 999px 999px 999px 2px;
+  background: rgba(91, 138, 98, 0.52);
+  transform: rotate(-24deg);
+  animation-duration: 10s;
+  animation-delay: -4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wellness-particle {
+    animation: none;
+  }
+}
+
+@keyframes wellness-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(14px, -18px, 0) rotate(18deg);
+    opacity: 0.9;
+  }
+}
+
 @keyframes accordion-down {
   from {
     height: 0;

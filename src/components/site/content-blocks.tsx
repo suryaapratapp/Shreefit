@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { ArrowUpRight, CheckCircle2, MessageCircle, UsersRound } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Leaf, MessageCircle, Music2, Sprout, UsersRound } from "lucide-react";
 import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { benefits, expertJointPhoto, experts, faqs, processSteps, site, timingCards, whatsappLink, whatsappMessages, whoItsFor } from "@/lib/site";
+import { benefits, expertHighlights, expertJointPhoto, experts, faqs, processSteps, site, sundaySession, timingCards, whatsappLink, whatsappMessages, whoItsFor } from "@/lib/site";
 import { SiteIcon } from "./icon";
 import { Reveal } from "./reveal";
 import { Section, SectionHeader } from "./section";
@@ -39,9 +39,9 @@ export function TimingsGrid({ showHeader = true }: { showHeader?: boolean }) {
     <div>
       {showHeader ? (
         <SectionHeader
-          eyebrow="Current live classes"
-          title="Two morning + two evening Hindi live sessions"
-          text="Choose from online guided batches with limited group size, Hindi instruction, and attentive support from home."
+          eyebrow="Choose your preferred session"
+          title="Apne routine ke hisaab se morning ya evening class choose karein"
+          text="Online guided fitness batches with Hindi instruction, stretching, mobility, stamina, gentle strength and attentive support from home."
           align="center"
         />
       ) : null}
@@ -120,11 +120,21 @@ export function ExpertsSection() {
           Shri Bhagwan Vashistha and Sushma Vashistha: trusted guidance for parents.
         </h2>
         <p className="mt-5 text-lg leading-8 text-[var(--stone-700)]">
-          ShreeFit is guided by certified Ayurveda and Yoga experts who bring caring,
-          experienced and wellness-focused guidance for Indian parents. Their approach
-          blends safe movement, breathwork, yoga-inspired routine and family-friendly
-          support in simple Hindi.
+          ShreeFit mein guidance sirf yoga ya Ayurveda tak limited nahi hai. Shri Bhagwan ji
+          aur Sushma ji parents ke liye practical fitness, stretching, stamina, mobility,
+          gentle strength, routine aur healthy lifestyle ko simple Hindi mein guide karte hain.
         </p>
+        <div className="mt-6 grid gap-3">
+          {expertHighlights.map((highlight) => (
+            <div
+              key={highlight}
+              className="flex gap-3 rounded-lg border border-[var(--cream-300)] bg-white/78 p-4 shadow-sm"
+            >
+              <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[var(--green-700)]" />
+              <p className="leading-7 text-[var(--stone-700)]">{highlight}</p>
+            </div>
+          ))}
+        </div>
         <Button asChild variant="outline" size="lg" className="mt-7">
           <a href={site.sbasUrl} target="_blank" rel="noreferrer">
             Know more about Shree Bhagwati Aarogya Sansthan
@@ -161,8 +171,8 @@ export function ExpertsSection() {
             </div>
             <CardContent className="pt-6">
               <p className="text-sm font-semibold leading-6 text-[var(--green-900)]">
-                Associated with Shree Bhagwati Aarogya Sansthan and focused on safe,
-                Hindi-first wellness guidance for parents.
+                Shree Bhagwati Aarogya Sansthan ke founders, certified Ayurveda aur Yoga
+                experts, aur parents ke liye balanced fitness + wellness guidance par focused.
               </p>
             </CardContent>
           </Card>
@@ -225,9 +235,11 @@ export function SbasTrustSection() {
             Shree Bhagwati Aarogya Sansthan se juda trusted wellness background.
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--stone-700)]">
-            Shri Bhagwan Vashistha aur Sushma Vashistha ka Ayurveda aur yoga background
-            ShreeFit ko generic online fitness se alag banata hai. Guidance wellness-rooted,
-            simple aur family-friendly rakhi gayi hai.
+            Shri Bhagwan Vashistha aur Sushma Vashistha Shree Bhagwati Aarogya Sansthan
+            ke founders hain. Pichhle 5 saalon mein unhone hundreds of students ko diploma
+            education/training di hai. Yeh credibility ShreeFit ko sirf workout nahi,
+            balki practical fitness, healthy lifestyle aur rooted wellness ka balanced
+            routine banati hai.
           </p>
         </div>
         <Button asChild size="lg" variant="primary">
@@ -236,6 +248,44 @@ export function SbasTrustSection() {
             <ArrowUpRight className="h-5 w-5" />
           </a>
         </Button>
+      </div>
+    </div>
+  );
+}
+
+export function SundaySessionSection() {
+  const icons = [Leaf, Sprout, Music2];
+
+  return (
+    <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+      <div>
+        <p className="eyebrow">{sundaySession.eyebrow}</p>
+        <h2 className="mt-3 text-balance text-3xl font-bold text-[var(--green-950)] sm:text-4xl">
+          {sundaySession.title}
+        </h2>
+        <p className="mt-5 text-lg leading-8 text-[var(--stone-700)]">{sundaySession.text}</p>
+        <p className="mt-4 text-lg leading-8 text-[var(--stone-700)]">{sundaySession.note}</p>
+      </div>
+      <div className="rounded-lg border border-[var(--cream-300)] bg-[linear-gradient(135deg,#ffffff_0%,#fff7e9_55%,#e7f0e8_100%)] p-5 shadow-[0_18px_50px_rgba(47,74,59,0.08)] sm:p-6">
+        <div className="grid gap-4">
+          {sundaySession.items.map((item, index) => {
+            const Icon = icons[index] ?? Leaf;
+            return (
+              <div key={item} className="flex gap-4 rounded-lg bg-white/76 p-4 shadow-sm">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-[var(--green-900)] text-[var(--saffron-200)]">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[var(--green-950)]">{item}</h3>
+                  <p className="mt-1 text-sm leading-6 text-[var(--stone-700)]">
+                    Fitness routine ke saath prakriti, wellness aur daily lifestyle ko
+                    practical tareeke se samajhne ka mauka.
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

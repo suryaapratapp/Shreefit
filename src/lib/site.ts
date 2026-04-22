@@ -15,6 +15,8 @@ export const whatsappMessages = {
   guidance:
     "Namaste, mujhe apne parent ke liye ShreeFit classes ke baare mein guidance chahiye.",
   timing: "Namaste, mujhe ShreeFit ke live sessions ke baare mein jankari chahiye.",
+  payment:
+    "Namaste, maine ShreeFit ke liye Rs. 1199/- ka payment kar diya hai. Yeh mera payment screenshot hai.",
 };
 
 export function whatsappLink(message = whatsappMessages.general) {
@@ -38,12 +40,12 @@ export const trustPoints = [
   },
   {
     title: "Age-appropriate movement",
-    text: "50+ adults ke liye gentle mobility, flexibility, balance aur strength routine.",
+    text: "50+ adults ke liye stretching, stamina, mobility, balance aur gentle strength routine.",
     icon: "ShieldCheck",
   },
   {
-    title: "Ayurveda + Yoga expertise",
-    text: "Shri Bhagwan Vashistha aur Sushma Vashistha certified Ayurveda aur Yoga experts hain.",
+    title: "Fitness + wellness guidance",
+    text: "Practical movement ke saath yoga, breathwork aur healthy lifestyle guidance.",
     icon: "BadgeCheck",
   },
   {
@@ -74,17 +76,17 @@ export const audienceCards = [
 export const whyFamiliesChoose = [
   {
     title: "Made for Indian families",
-    text: "Language, routine aur guidance Indian parents ke comfort ke hisaab se design ki gayi hai.",
+    text: "Language, routine aur guided fitness Indian parents ke comfort ke hisaab se design ki gayi hai.",
     icon: "HeartHandshake",
   },
   {
     title: "No random workout pressure",
-    text: "YouTube-style guessing nahi. Structured class flow, gentle progress, aur regular routine.",
+    text: "YouTube-style guessing nahi. Stretching, mobility, stamina aur strength ka structured routine.",
     icon: "Route",
   },
   {
-    title: "Warm expert supervision",
-    text: "Shri Bhagwan Vashistha aur Sushma Vashistha ka caring approach parents ko seen, safe aur encouraged feel karata hai.",
+    title: "20+ years lifestyle discipline",
+    text: "Shri Bhagwan ji aur Sushma ji Ayurveda, yoga, fitness aur healthy lifestyle ko 2 decades se follow kar rahe hain.",
     icon: "Sparkles",
   },
   {
@@ -148,6 +150,18 @@ export const timingCards = [
     note: "Guided online class",
   },
 ];
+
+export const pricing = {
+  monthlyPrice: "Rs. 1199/-",
+  amount: "1199",
+  discountLabel: "50% OFF",
+  discountText: "after 50% discount",
+  planLabel: "Monthly Plan",
+  upiId: "Jaivikkisan1@okicici",
+  qrImage: "/images/shreefit-upi-qr.svg",
+  upiUri:
+    "upi://pay?pa=Jaivikkisan1%40okicici&pn=ShreeFit&am=1199&cu=INR&tn=ShreeFit%20Monthly%20Fee",
+};
 
 export const benefits = [
   {
@@ -218,7 +232,7 @@ export const experts = [
     initials: "SB",
     image: "/images/shribhagwan.png",
     imageAlt: "Portrait of Shri Bhagwan Vashistha, ShreeFit trainer",
-    text: "Experienced, caring guidance rooted in Ayurveda, yoga, age-appropriate movement and everyday wellness for parents.",
+    text: "20+ saal se Ayurvedic, yoga, fitness aur healthy lifestyle ko jeene wale experienced guide. Parents ke liye practical movement, routine aur wellness par caring focus.",
   },
   {
     name: "Sushma Vashistha",
@@ -226,7 +240,7 @@ export const experts = [
     initials: "SV",
     image: "/images/sushma.png",
     imageAlt: "Portrait of Sushma Vashistha, ShreeFit trainer",
-    text: "A warm teaching style that helps parents feel comfortable, motivated and confident while learning in Hindi.",
+    text: "20+ saal ki disciplined lifestyle practice ke saath warm, patient teaching. Hindi mein parents ko stretching, stamina, mobility aur confidence build karne mein support.",
   },
 ];
 
@@ -235,6 +249,26 @@ export const expertJointPhoto = {
   alt: "Shri Bhagwan Vashistha and Sushma Vashistha, ShreeFit founders and trainers",
   caption:
     "Shri Bhagwan Vashistha and Sushma Vashistha bring certified Ayurveda and Yoga guidance to ShreeFit.",
+};
+
+export const expertHighlights = [
+  "20+ saal se Ayurveda, yoga, fitness aur healthy lifestyle ko apni daily life mein follow kar rahe hain.",
+  "Dono Shree Bhagwati Aarogya Sansthan ke founders hain.",
+  "Pichhle 5 saalon mein hundreds of students ko diploma education/training de chuke hain.",
+];
+
+export const sundaySession = {
+  title: "Har Sunday ek khaas wellness session",
+  eyebrow: "Special Sunday Session",
+  text:
+    "ShreeFit ka Sunday session regular fitness routine ka ek unique value-add hai. Shri Bhagwan ji participants ko kheton mein le jaakar alag-alag paudhon se parichit karate hain, unke Ayurvedic gun samjhate hain, aur batate hain ki rozmarra jeevan mein unka upyog kaise kiya ja sakta hai.",
+  note:
+    "Isme kirtan, plantation, gharelu upchar, organic farming, healthy lifestyle guidance aur prakriti se judkar seekhne ka anubhav shamil hota hai - fitness, routine aur wellness journey ko aur meaningful banane ke liye.",
+  items: [
+    "Paudhon ke Ayurvedic gun aur daily use",
+    "Plantation aur organic farming guidance",
+    "Kirtan, ghar ke upchar aur healthy lifestyle",
+  ],
 };
 
 export const testimonials = [
