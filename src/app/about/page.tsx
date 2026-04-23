@@ -6,7 +6,7 @@ import { ExpertsSection, SbasTrustSection } from "@/components/site/content-bloc
 import { Section, SectionHeader } from "@/components/site/section";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { site } from "@/lib/site";
+import { motto, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,6 +28,9 @@ export default function AboutPage() {
               ShreeFit was created for Indian families who want their mother or father to
               stay active, confident and connected without the pressure of generic fitness
               programs.
+            </p>
+            <p className="mt-5 inline-flex rounded-full border border-[var(--cream-300)] bg-white px-4 py-2 text-sm font-bold text-[var(--green-900)] shadow-sm">
+              {motto}
             </p>
             <p className="mt-5 text-lg leading-8 text-[var(--stone-700)]">
               Classes are Hindi only, online from home, and focused on gentle movement,

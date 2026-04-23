@@ -2,10 +2,17 @@ export const site = {
   name: "ShreeFit",
   fullName: "ShreeFit - Fitness for Parents",
   url: "https://shreefit.in",
-  tagline: "Hindi mein guided online fitness and wellness classes for parents.",
+  tagline: "Routine badlega, toh zindagi badlegi.",
   phoneDisplay: "+91 70151 36264",
   whatsappNumber: "917015136264",
   sbasUrl: "https://sbas.co.in/",
+};
+
+export const motto = "Routine badlega, toh zindagi badlegi.";
+
+export const topBanner = {
+  badge: "Ongoing 50% OFF",
+  message: "ShreeFit ab Rs. 1299/- per month",
 };
 
 export const whatsappMessages = {
@@ -16,7 +23,7 @@ export const whatsappMessages = {
     "Namaste, mujhe apne parent ke liye ShreeFit classes ke baare mein guidance chahiye.",
   timing: "Namaste, mujhe ShreeFit ke live sessions ke baare mein jankari chahiye.",
   payment:
-    "Namaste, maine ShreeFit ke liye Rs. 1199/- ka payment kar diya hai. Yeh mera payment screenshot hai.",
+    "Namaste, maine ShreeFit ke liye Rs. 1299/- ka payment kar diya hai. Yeh mera payment screenshot hai.",
 };
 
 export function whatsappLink(message = whatsappMessages.general) {
@@ -152,15 +159,59 @@ export const timingCards = [
 ];
 
 export const pricing = {
-  monthlyPrice: "Rs. 1199/-",
-  amount: "1199",
+  monthlyPrice: "Rs. 1299/-",
+  originalPrice: "Rs. 2600",
+  amount: "1299",
   discountLabel: "50% OFF",
   discountText: "after 50% discount",
+  offerLabel: "Special Launch Price",
   planLabel: "Monthly Plan",
+  comparisonLine:
+    "Aaj ke shehri lifestyle mein do logon ke ek achhe dinner outing jitni value - aur poore mahine ka parents fitness, routine aur wellness support.",
   upiId: "Jaivikkisan1@okicici",
   qrImage: "/images/shreefit-upi-qr.svg",
   upiUri:
-    "upi://pay?pa=Jaivikkisan1%40okicici&pn=ShreeFit&am=1199&cu=INR&tn=ShreeFit%20Monthly%20Fee",
+    "upi://pay?pa=Jaivikkisan1%40okicici&pn=ShreeFit&am=1299&cu=INR&tn=ShreeFit%20Monthly%20Fee",
+};
+
+export const familyStory = {
+  heading:
+    "Jinhone poori zindagi aapke liye khud ko thakaya, ab unki sehat, khushi aur routine ki baari hai.",
+  subheading:
+    "Aaj ke busy shehri jeevan mein Mummy-Papa ko sirf walking nahi, balki stretching, movement, strength, stamina aur ek joyful routine bhi chahiye. ShreeFit usi care ko ghar tak laata hai.",
+  image: "/images/family-storytelling-journey.png",
+  imageAlt:
+    "Storytelling illustration showing Indian joint family life, modern city flat life, and happy parent fitness connection with adult children",
+  chapters: [
+    {
+      label: "Pehle ka jeevan",
+      title: "Joint family, gaon ka khula jeevan, aur natural activity",
+      text:
+        "Pehle parivaar saath rehte the. Khet, aangan, chalna-phirna, ghar ke kaam aur community ke saath routine apne aap banta tha. Sharir ko roz ki natural movement milti thi aur parivaarik connection bhi zyada gehra hota tha.",
+    },
+    {
+      label: "Aaj ki reality",
+      title: "Shehron ke flats, kam movement, aur sharir mein jama dard",
+      text:
+        "Ab zindagi flats, lifts, screens aur limited movement mein simat gayi hai. Saari zindagi ki mehnat ke baad kai parents back pain, shoulder pain, knee pain, joint pain, stiffness aur low energy ke saath din nikaalte hain.",
+    },
+    {
+      label: "Sirf walking kaafi nahi",
+      title: "Overall wellbeing ke liye guided routine bhi zaroori hai",
+      text:
+        "Walking achhi hai, lekin uske saath stretching, guided fitness, mobility, strength, stamina aur regular practice bhi chahiye. Aaj ke bachche khud gym jaate hain aur active feel karte hain - Mummy-Papa ko bhi wohi ehsaas milna chahiye.",
+    },
+    {
+      label: "Ab waqt hai",
+      title: "Parents ko ek healthy aur happy routine gift kijiye",
+      text:
+        "ShreeFit ke through fitness sirf exercise nahi rehti. Yeh ek caring family step ban jata hai - jahan parents khud ko better feel karte hain, routine pakadte hain, aur bachchon ko sukoon milta hai ki woh unke liye kuch meaningful kar pa rahe hain.",
+    },
+  ],
+  closingTitle: "ShreeFit se family aur bhi kareeb aa sakti hai",
+  closingText:
+    "Whole family ek saath workout kar sakti hai, fun challenges kar sakti hai, progress share kar sakti hai, aur family time ko ek naye healthy tareeke se jee sakti hai. Apne parents ko sirf healthy nahi, khush bhi rakho.",
+  ctaLabel: "Aaj hi Mummy-Papa ke liye pehla kadam uthaiye",
 };
 
 export const benefits = [

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { benefits, expertHighlights, expertJointPhoto, experts, faqs, processSteps, site, sundaySession, timingCards, whatsappLink, whatsappMessages, whoItsFor } from "@/lib/site";
+import { benefits, expertHighlights, expertJointPhoto, experts, faqs, motto, processSteps, site, sundaySession, timingCards, whatsappLink, whatsappMessages, whoItsFor } from "@/lib/site";
 import { SiteIcon } from "./icon";
 import { Reveal } from "./reveal";
 import { Section, SectionHeader } from "./section";
@@ -124,6 +124,9 @@ export function ExpertsSection() {
           aur Sushma ji parents ke liye practical fitness, stretching, stamina, mobility,
           gentle strength, routine aur healthy lifestyle ko simple Hindi mein guide karte hain.
         </p>
+        <div className="mt-5 inline-flex rounded-full border border-[var(--cream-300)] bg-[var(--cream-50)] px-4 py-2 text-sm font-bold text-[var(--green-900)] shadow-sm">
+          {motto}
+        </div>
         <div className="mt-6 grid gap-3">
           {expertHighlights.map((highlight) => (
             <div
@@ -241,6 +244,7 @@ export function SbasTrustSection() {
             balki practical fitness, healthy lifestyle aur rooted wellness ka balanced
             routine banati hai.
           </p>
+          <p className="mt-4 text-base font-semibold text-[var(--green-800)]">{motto}</p>
         </div>
         <Button asChild size="lg" variant="primary">
           <a href={site.sbasUrl} target="_blank" rel="noreferrer">

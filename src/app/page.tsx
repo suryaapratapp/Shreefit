@@ -3,12 +3,13 @@ import Image from "next/image";
 import { CheckCircle2, HeartPulse, MessageCircle } from "lucide-react";
 import { ExpertsSection, HomepageFaqPreview, SbasTrustSection, SundaySessionSection, TestimonialsSection, TimingsGrid, WhoItsForList } from "@/components/site/content-blocks";
 import { CtaBand, PrimaryCtas } from "@/components/site/cta";
+import { FamilyStorySection } from "@/components/site/family-story-section";
 import { PaymentSection } from "@/components/site/payment-section";
 import { Reveal } from "@/components/site/reveal";
 import { Section, SectionHeader } from "@/components/site/section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { faqs, trustPoints, whatsappLink, whatsappMessages, whyFamiliesChoose } from "@/lib/site";
+import { faqs, motto, topBanner, trustPoints, whatsappLink, whatsappMessages, whyFamiliesChoose } from "@/lib/site";
 import { SiteIcon } from "@/components/site/icon";
 
 export const metadata: Metadata = {
@@ -37,6 +38,22 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <section className="announcement-ambient relative overflow-hidden border-b border-[rgba(255,255,255,0.18)] px-4 py-3 sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <span className="wellness-particle left-[6%] top-[35%]" />
+          <span className="wellness-particle wellness-particle-slow left-[42%] top-[18%]" />
+          <span className="wellness-particle wellness-particle-leaf right-[12%] top-[28%]" />
+        </div>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 text-center">
+          <span className="rounded-full border border-white/18 bg-white/12 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.14em] text-white/92 backdrop-blur-md sm:text-[0.8rem]">
+            {topBanner.badge}
+          </span>
+          <HeartPulse className="h-4 w-4 shrink-0 text-[var(--saffron-100)] sm:h-5 sm:w-5" />
+          <p className="text-sm font-bold leading-6 text-white sm:text-base">
+            {topBanner.message}
+          </p>
+        </div>
+      </section>
       <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:min-h-[calc(100vh-73px)] lg:px-8 lg:py-20">
         <div className="absolute inset-0 -z-10">
           <Image
@@ -49,6 +66,12 @@ export default function Home() {
           />
           <div className="hero-mask absolute inset-0" />
         </div>
+        <div className="pointer-events-none absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+          <span className="wellness-particle left-[10%] top-[18%]" />
+          <span className="wellness-particle wellness-particle-slow left-[56%] top-[12%]" />
+          <span className="wellness-particle wellness-particle-leaf right-[8%] top-[22%]" />
+          <span className="wellness-particle wellness-particle-slow bottom-[18%] left-[16%]" />
+        </div>
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.02fr_0.8fr] lg:items-center">
           <Reveal className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--cream-300)] bg-white/82 px-4 py-2 text-sm font-bold text-[var(--green-900)] shadow-sm backdrop-blur">
@@ -59,12 +82,13 @@ export default function Home() {
               ShreeFit - Fitness for Parents
             </h1>
             <p className="mt-5 max-w-2xl text-balance text-2xl font-semibold leading-snug text-[var(--green-800)]">
-              Apne parents ko ghar baithe safe aur guided fitness routine dein.
+              {motto}
             </p>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--stone-700)]">
-              Hindi mein live classes, pyaar se guidance, aur better routine. Stretching,
-              stamina, mobility, flexibility, gentle strength, breathwork aur healthy
-              lifestyle ka balanced program for Indian families.
+              Apne parents ko ghar baithe safe aur guided fitness routine dein. Hindi mein
+              live classes, pyaar se guidance, aur better routine. Stretching, stamina,
+              mobility, flexibility, gentle strength, breathwork aur healthy lifestyle ka
+              balanced program for Indian families.
             </p>
             <PrimaryCtas className="mt-8" />
             <div className="mt-8 flex flex-wrap gap-3">
@@ -101,9 +125,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section className="bg-[var(--cream-50)]">
-        <PaymentSection />
-      </Section>
+      <FamilyStorySection />
 
       <Section className="bg-white">
         <SectionHeader
@@ -166,6 +188,10 @@ export default function Home() {
           align="center"
         />
         <TestimonialsSection />
+      </Section>
+
+      <Section className="bg-[var(--cream-50)]">
+        <PaymentSection />
       </Section>
 
       <HomepageFaqPreview />

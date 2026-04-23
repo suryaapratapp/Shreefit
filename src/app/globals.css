@@ -95,6 +95,13 @@ textarea {
     linear-gradient(135deg, rgba(255, 252, 245, 0.72), rgba(231, 240, 232, 0.5));
 }
 
+.announcement-ambient {
+  background:
+    radial-gradient(circle at 12% 50%, rgba(255, 206, 124, 0.18), transparent 24%),
+    radial-gradient(circle at 84% 40%, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(90deg, rgba(131, 66, 32, 0.96), rgba(181, 102, 42, 0.94), rgba(95, 132, 72, 0.9));
+}
+
 .wellness-particle {
   position: absolute;
   width: 10px;
