@@ -45,26 +45,54 @@ export function FamilyStorySection() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-start">
           <Reveal className="lg:sticky lg:top-28">
-            <div className="overflow-hidden rounded-lg border border-[rgba(255,255,255,0.72)] bg-white/44 shadow-[0_28px_90px_rgba(47,74,59,0.14)] backdrop-blur-xl">
-              <div className="relative aspect-[16/11] overflow-hidden">
-                <Image
-                  src={familyStory.image}
-                  alt={familyStory.imageAlt}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 52vw, 100vw"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,41,31,0.02),rgba(16,41,31,0.22))]" />
+            <div className="grid gap-4">
+              <div className="overflow-hidden rounded-lg border border-[rgba(255,255,255,0.72)] bg-white/44 shadow-[0_28px_90px_rgba(47,74,59,0.14)] backdrop-blur-xl">
+                <div className="relative aspect-[16/11] overflow-hidden">
+                  <Image
+                    src={familyStory.image}
+                    alt={familyStory.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 52vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,41,31,0.02),rgba(16,41,31,0.22))]" />
+                </div>
+                <div className="grid gap-3 p-5 sm:grid-cols-3 sm:p-6">
+                  {["Joint family warmth", "Today’s reality", "ShreeFit bridge"].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-lg border border-[var(--cream-300)] bg-white/72 px-4 py-3 text-sm font-semibold text-[var(--green-900)] shadow-sm backdrop-blur"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="grid gap-3 p-5 sm:grid-cols-3 sm:p-6">
-                {["Joint family warmth", "Today’s reality", "ShreeFit bridge"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-lg border border-[var(--cream-300)] bg-white/72 px-4 py-3 text-sm font-semibold text-[var(--green-900)] shadow-sm backdrop-blur"
-                  >
-                    {item}
+
+              <div className="overflow-hidden rounded-lg border border-[rgba(255,255,255,0.76)] bg-white/62 shadow-[0_22px_70px_rgba(47,74,59,0.12)] backdrop-blur-xl">
+                <div className="border-b border-[var(--cream-300)] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,247,233,0.76))] px-5 py-4">
+                  <p className="text-sm font-bold text-[var(--green-900)]">
+                    {familyStory.video.label}
+                  </p>
+                </div>
+                <div className="p-3 sm:p-4">
+                  <div className="overflow-hidden rounded-lg border border-[var(--cream-300)] bg-[var(--green-950)] shadow-[0_18px_44px_rgba(16,41,31,0.18)]">
+                    <div className="relative aspect-video">
+                      <video
+                        className="h-full w-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        poster={familyStory.video.poster}
+                        aria-label={familyStory.video.ariaLabel}
+                      >
+                        <source src={familyStory.video.src} type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </Reveal>

@@ -34,7 +34,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Program", href: "/program" },
-  { label: "Timings", href: "/timings" },
+  { label: "Pricing", href: "/#pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -175,13 +175,18 @@ export const pricing = {
 };
 
 export const familyStory = {
-  heading:
-    "Jinhone poori zindagi aapke liye khud ko thakaya, ab unki sehat, khushi aur routine ki baari hai.",
+  heading: "Ab unki sehat aur khushi ki baari hai.",
   subheading:
     "Aaj ke busy shehri jeevan mein Mummy-Papa ko sirf walking nahi, balki stretching, movement, strength, stamina aur ek joyful routine bhi chahiye. ShreeFit usi care ko ghar tak laata hai.",
   image: "/images/family-storytelling-journey.png",
   imageAlt:
     "Storytelling illustration showing Indian joint family life, modern city flat life, and happy parent fitness connection with adult children",
+  video: {
+    src: "/images/shreefit.mp4",
+    label: "Ghar baithe guided ShreeFit session ka anubhav",
+    ariaLabel: "ShreeFit live session experience video",
+    poster: "/images/family-storytelling-journey.png",
+  },
   chapters: [
     {
       label: "Pehle ka jeevan",

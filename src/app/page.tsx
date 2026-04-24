@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2, HeartPulse, MessageCircle } from "lucide-react";
-import { ExpertsSection, HomepageFaqPreview, SbasTrustSection, SundaySessionSection, TestimonialsSection, TimingsGrid, WhoItsForList } from "@/components/site/content-blocks";
+import { HomepageFaqPreview, SbasTrustSection, SundaySessionSection, TestimonialsSection, TimingsGrid, WhoItsForList } from "@/components/site/content-blocks";
 import { CtaBand, PrimaryCtas } from "@/components/site/cta";
 import { FamilyStorySection } from "@/components/site/family-story-section";
 import { PaymentSection } from "@/components/site/payment-section";
@@ -164,10 +164,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-white">
-        <ExpertsSection />
-      </Section>
-
       <Section className="bg-[var(--cream-50)]">
         <SbasTrustSection />
       </Section>
@@ -190,7 +186,7 @@ export default function Home() {
         <TestimonialsSection />
       </Section>
 
-      <Section className="bg-[var(--cream-50)]">
+      <Section className="bg-[var(--cream-50)]" id="pricing">
         <PaymentSection />
       </Section>
 

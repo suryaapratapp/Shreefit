@@ -13,6 +13,11 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  function isActiveLink(href: string) {
+    const [basePath] = href.split("#");
+    return pathname === basePath;
+  }
+
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--cream-300)] bg-[rgba(255,252,245,0.9)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
@@ -44,7 +49,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "rounded-full px-4 py-2 text-sm font-semibold text-[var(--green-900)] transition hover:bg-white hover:text-[var(--green-700)]",
-                pathname === link.href && "bg-white shadow-sm",
+                isActiveLink(link.href) && "bg-white shadow-sm",
               )}
             >
               {link.label}
@@ -82,7 +87,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className={cn(
                   "rounded-lg px-4 py-3 text-base font-semibold text-[var(--green-950)]",
-                  pathname === link.href && "bg-white shadow-sm",
+                  isActiveLink(link.href) && "bg-white shadow-sm",
                 )}
               >
                 {link.label}
