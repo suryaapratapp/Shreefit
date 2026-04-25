@@ -85,14 +85,14 @@ export default function Home() {
               {motto}
             </p>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--stone-700)]">
-              Apne parents ko ghar baithe safe aur guided fitness routine dein. Hindi mein
-              live classes, pyaar se guidance, aur better routine. Stretching, stamina,
-              mobility, flexibility, gentle strength, breathwork aur healthy lifestyle ka
-              balanced program for Indian families.
+              Mummy-Papa ke liye ghar baithe safe, guided fitness routine. Hindi live
+              classes mein stretching, mobility, balance, gentle strength aur breathwork
+              ka simple program - parents ke comfort ke liye, aur children ke peace of mind
+              ke liye.
             </p>
             <PrimaryCtas className="mt-8" />
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Morning and evening sessions", "Hindi live classes", "Online from home", "Limited guided batches"].map((item) => (
+              {["Morning/evening batches", "Beginner-friendly Hindi cues", "Online from home", "Ask for parent or self"].map((item) => (
                 <span
                   key={item}
                   className="inline-flex items-center gap-2 rounded-full bg-white/86 px-4 py-2 text-sm font-bold text-[var(--green-900)] shadow-sm backdrop-blur"
@@ -199,15 +199,15 @@ export default function Home() {
       <section className="border-y border-[var(--cream-300)] bg-[var(--saffron-100)] px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-bold text-[var(--green-950)]">Need help choosing a batch?</p>
+            <p className="font-bold text-[var(--green-950)]">Have age and batch preference ready?</p>
             <p className="mt-1 text-[var(--stone-700)]">
-              WhatsApp par parent ki age aur preferred morning/evening batch share karein.
+              One WhatsApp message is enough: age, city, comfort level and morning/evening preference.
             </p>
           </div>
           <Button asChild variant="primary" size="lg">
             <a href={whatsappLink(whatsappMessages.timing)} target="_blank" rel="noreferrer">
               <MessageCircle className="h-5 w-5" />
-              Ask on WhatsApp
+              Check batch availability
             </a>
           </Button>
         </div>

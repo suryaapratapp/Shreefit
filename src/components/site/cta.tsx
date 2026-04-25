@@ -9,7 +9,7 @@ export function PrimaryCtas({ className = "" }: { className?: string }) {
       <Button asChild size="lg" variant="saffron">
         <a href={whatsappLink(whatsappMessages.parent)} target="_blank" rel="noreferrer">
           <MessageCircle className="h-5 w-5" />
-          WhatsApp par baat karein
+          Mummy-Papa ke liye enquire karein
         </a>
       </Button>
       <Button asChild size="lg" variant="primary">
@@ -18,7 +18,7 @@ export function PrimaryCtas({ className = "" }: { className?: string }) {
           target="_blank"
           rel="noreferrer"
         >
-          Free Guidance Poochhein
+          Safe routine guidance lein
           <ArrowRight className="h-5 w-5" />
         </a>
       </Button>
@@ -38,22 +38,30 @@ export function CtaBand() {
       <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--saffron-200)]">
-            WhatsApp enquiry
+            Ready to choose the right batch?
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
-            Apne parents ke liye safe Hindi fitness classes ke baare mein baat karein.
+            Parent ke liye enquire karein, ya khud join karne ke liye guidance lein.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-white/82">
-            Hum aapko available batches, parent comfort level, aur WhatsApp enquiry ke
-            next steps clearly explain kar denge.
+            WhatsApp par age, city, comfort level aur morning/evening preference bhejein.
+            Hum suitable live batch, fees aur next steps clearly share kar denge.
           </p>
         </div>
-        <Button asChild size="lg" variant="saffron" className="w-full sm:w-auto">
-          <a href={whatsappLink(whatsappMessages.parent)} target="_blank" rel="noreferrer">
-            <MessageCircle className="h-5 w-5" />
-            WhatsApp par enquire karein
-          </a>
-        </Button>
+        <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[460px]">
+          <Button asChild size="lg" variant="saffron" className="w-full">
+            <a href={whatsappLink(whatsappMessages.parent)} target="_blank" rel="noreferrer">
+              <MessageCircle className="h-5 w-5" />
+              For my parent
+            </a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="w-full border-white/28 bg-white/10 text-white hover:border-white/58 hover:bg-white/16">
+            <a href={whatsappLink(whatsappMessages.self)} target="_blank" rel="noreferrer">
+              <MessageCircle className="h-5 w-5" />
+              For myself
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   );

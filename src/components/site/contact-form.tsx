@@ -40,19 +40,20 @@ export function ContactForm() {
     defaultValues: {
       batch: "Need guidance",
       message:
-        "Namaste, main apne parent ke liye ShreeFit Hindi fitness classes ke baare mein jankari chahata/chahati hoon.",
+        "Namaste, main ShreeFit Hindi online fitness classes ke liye guidance chahta/chahti hoon. Parent ke comfort aur suitable batch ke baare mein please suggest karein.",
     },
   });
 
   function onSubmit(values: FormValues) {
     const message = [
-      "Namaste, mujhe ShreeFit ke baare mein enquiry karni hai.",
+      "Namaste, mujhe ShreeFit Hindi online fitness classes ke liye enquiry karni hai.",
       `Name: ${values.name}`,
       `Parent age: ${values.parentAge}`,
       `City: ${values.city}`,
       `Preferred batch: ${values.batch}`,
       `WhatsApp: ${values.whatsapp}`,
       `Message: ${values.message}`,
+      "Please fees, available batch aur joining process share kar dijiye.",
     ].join("\n");
 
     window.open(
@@ -123,7 +124,7 @@ export function ContactForm() {
 
       <Button type="submit" size="lg" variant="saffron" disabled={isSubmitting}>
         <MessageCircle className="h-5 w-5" />
-        Send enquiry on WhatsApp
+        Send detailed WhatsApp enquiry
         <ArrowRight className="h-5 w-5" />
       </Button>
     </form>

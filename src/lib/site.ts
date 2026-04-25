@@ -16,12 +16,18 @@ export const topBanner = {
 };
 
 export const whatsappMessages = {
-  general: "Namaste, mujhe ShreeFit ke baare mein jankari chahiye.",
+  general:
+    "Namaste, mujhe ShreeFit ke Hindi online fitness classes ke baare mein jankari chahiye. Please batches, fees aur joining process share kar dijiye.",
   parent:
-    "Namaste, main apne parents ke liye Hindi fitness classes ke baare mein poochna chahta/chahti hoon.",
+    "Namaste, main apne Mummy/Papa ke liye ShreeFit Hindi online fitness classes enquire karna chahta/chahti hoon. Parent ki age, city aur morning/evening batch preference share kar sakta/sakti hoon.",
+  self:
+    "Namaste, main apne liye ShreeFit Hindi online fitness classes join karna chahta/chahti hoon. Please beginner-friendly batches, fees aur joining process bata dijiye.",
   guidance:
-    "Namaste, mujhe apne parent ke liye ShreeFit classes ke baare mein guidance chahiye.",
-  timing: "Namaste, mujhe ShreeFit ke live sessions ke baare mein jankari chahiye.",
+    "Namaste, mujhe apne parent ke liye safe fitness routine choose karne mein guidance chahiye. Unki age, comfort level aur health concerns ke hisaab se suitable batch suggest kar dijiye.",
+  timing:
+    "Namaste, mujhe ShreeFit ke morning/evening live sessions ke baare mein jankari chahiye. Please available timings aur next batch joining details share kar dijiye.",
+  sticky:
+    "Namaste, mujhe ShreeFit ke baare mein quick WhatsApp guidance chahiye. Main parent ki age aur preferred batch share kar sakta/sakti hoon.",
   payment:
     "Namaste, maine ShreeFit ke liye Rs. 1299/- ka payment kar diya hai. Yeh mera payment screenshot hai.",
 };
