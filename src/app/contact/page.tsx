@@ -10,7 +10,7 @@ import { site, whatsappLink, whatsappMessages } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact ShreeFit on WhatsApp Business at +91 70151 36264 or send a quick enquiry for Hindi online fitness classes for parents.",
+    "Contact ShreeFit on WhatsApp Business at +91 83959 12327 or send a quick enquiry for Hindi online fitness classes for parents.",
 };
 
 export default function ContactPage() {

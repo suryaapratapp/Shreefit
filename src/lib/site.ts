@@ -3,8 +3,8 @@ export const site = {
   fullName: "ShreeFit - Fitness for Parents",
   url: "https://shreefit.in",
   tagline: "Routine badlega, toh zindagi badlegi.",
-  phoneDisplay: "+91 70151 36264",
-  whatsappNumber: "917015136264",
+  phoneDisplay: "+91 83959 12327",
+  whatsappNumber: "918395912327",
   sbasUrl: "https://sbas.co.in/",
 };
 
@@ -429,7 +429,7 @@ export const faqs = [
   {
     question: "Kya WhatsApp par baat ho sakti hai?",
     answer:
-      "Bilkul. WhatsApp Business number +91 70151 36264 par directly baat kar sakte hain.",
+      "Bilkul. WhatsApp Business number +91 83959 12327 par directly baat kar sakte hain.",
   },
   {
     question: "Kya ye beginners ke liye suitable hai?",
